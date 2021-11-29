@@ -50,7 +50,7 @@
         }
 
         p {
-            margin-bottom: 10.5em;
+            margin-bottom: 1.5em;
             color: #00161a;
             text-align: left;
         }
@@ -97,7 +97,7 @@
         /* Medium screens */
         @media all and (max-width: 800px) {
             .navigation {
-            /* When on medium sized screens, to center it by evenly distributing empty space around items */
+                /* When on medium sized screens, to center it by evenly distributing empty space around items */
                 justify-content: space-around;
             }
         }
@@ -139,6 +139,11 @@
             width: 100%;
             height: auto;
             
+        }
+
+        #hhb {
+            width: 500px;
+            margin: auto;
         }
 
         .main p {
@@ -213,6 +218,43 @@
                  flex: 0 1 calc(25% - 1em);
             }
         }
+
+        /* Flexbox stuff oneven pages */
+        /* Flexbox stuff */
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+             flex: 1 0 500px;
+             box-sizing: border-box;
+             margin: 1rem .25em;
+        }
+
+        @media screen and (min-width: 40em) {
+            .card {
+                 max-width: calc(50% -  1em);
+            }
+        }
+
+        @media screen and (min-width: 60em) {
+            .card {
+                max-width: calc(25% - 1em);
+            }
+        }
+
+        .centered {
+              margin: 0 auto;
+              padding: 0 1em;
+        }
+
+        @media screen and (min-width: 52em) {
+             .centered {
+                  max-width: 52em;
+                }
+        }
         
         /*  ----x----- Media Queries -----x----   */
             
@@ -235,6 +277,7 @@
             background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             justify-content: center;
+            clear: both;
         }
 
 
@@ -253,10 +296,10 @@
             <!-- --------- Navigation ------------ -->
             <div>
                 <ul class="navigation">
-                    <li><a href="index01.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="#ctt">Contact</a></li>
                 </ul>
             </div>
             <!-- ----x---- Navigation ------x----- -->
@@ -267,13 +310,19 @@
         
         <!-- ---------- Blog Card ---------- -->
         <div class="main-area">
+            <div class="centered" id="hhb"></div>
             <h1>Hugo's blog</h1>
 
-             <h3>Contents</h3>
+             
+
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Graphics_Designer.jpg/800px-Graphics_Designer.jpg" alt="Designer">
 
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error corrupti, consectetur tempora excepturi esse quidem iste explicabo eum neque et quo dolor id ullam odit sit quis illo nemo aliquam omnis repellat odio ut ea. Natus quia iusto suscipit!</p>
-            <div class="centered">
+            </div>
+             <div class="centered">
+
                 <section class="cards">
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -288,6 +337,7 @@
                         </a>
                         
                     </article><!-- Content for card one -->
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -302,6 +352,7 @@
                         </a>
                         
                     </article><!-- Content for card two  -->
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -317,6 +368,7 @@
                         </a>
                         
                     </article><!-- Content for card three -->
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -333,6 +385,7 @@
                 </section>
                 
                 <section class="cards">
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -347,6 +400,7 @@
                         </a>
                         
                     </article><!-- Content for card one -->
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -361,6 +415,7 @@
                         </a>
                         
                     </article><!-- Content for card two  -->
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -376,6 +431,7 @@
                         </a>
                         
                     </article><!-- Content for card three -->
+
                     <article class="card">
                         <a href="#">
                             <p class="thumbnail">
@@ -389,27 +445,53 @@
                         </a>
                         
                     </article><!-- Content for card four  -->
+
+                    <article class="card">
+                        <a href="#">
+                            <p class="thumbnail">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Ethan_Marcotte_-_Responsive_webdesign.jpg/800px-Ethan_Marcotte_-_Responsive_webdesign.jpg" alt="responsive webdesign"> 
+                            </p>
+                            <div class="card-content">
+                            <h2>First Post</h2>
+                            <p>Not shure what to say. But this is gonna be the first. In many more to come...</p>
+                            <p>Not shure what to say. But this is gonna be the first. In many more to come...</p>
+                            <p>Not shure what to say. But this is gonna be the first. In many more to come...</p>
+                            <p>Not shure what to say. But this is gonna be the first. In many more to come...</p>
+                            </div>
+                        </a>
+                        
+                    </article><!-- Content for card three -->
+
+                    <article class="card">
+                        <a href="#">
+                            <p class="thumbnail">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Ethan_Marcotte_-_Responsive_webdesign.jpg/800px-Ethan_Marcotte_-_Responsive_webdesign.jpg" alt="responsive webdesign"> 
+                            </p>
+                            <div class="card-content">
+                            <h2>First Post</h2>
+                            <p>Not shure what to say. But this is gonna be the first. In many more to come...</p>
+                            <p>Content for card one</p>
+                            </div>
+                        </a>
+                        
+                    </article><!-- Content for card four  -->
+                    
                 </section>
                 
             </div>
          
         </div>    
-        <!-- ----x----- Blog Card -----x---- -->  
+        <!-- ----x----- Blog Card -----x---- --> 
         
-        
-        
-        
-        <h1>___'s blog</h1>
+        <div class="centered">
+            <section class="contact" id="ctt">
 
-        <h3>Contents</h3>
-        <ul>
-            <li>First post!</li>
-        </ul>
-        
-        <h2>First post</h2>
-        <h6>Posted on some date in some year</h6>
-        
-        <p>Something excited happened.</p>
+                <P>Coming Soon</P>
+
+            </section>
+        </div>
+                    
+               
 
         <footer class="footer">
             <div class="footer">Made by Napo</div>
